@@ -14,6 +14,6 @@ void setup() {
 
 void loop() {
   //plein régime
-  analogWrite(ENB,255);
+  analogWrite(ENB,63);
 
 }
