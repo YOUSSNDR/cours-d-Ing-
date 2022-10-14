@@ -30,5 +30,5 @@ void CalculVitesseD(void){
 
 void loop() {
   //plein régime
-  analogWrite(ENB,255);
+  analogWrite(ENB,173);
 }
