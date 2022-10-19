@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="vitreplexiprboitier.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="260.9224"
+     inkscape:cy="474.8222"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2624" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="277.5"
+       y="361.5"
+       width="153"
+       height="140"
+       id="rect3464" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.0100238;stroke-dasharray:none;stroke-opacity:1"
+       id="rect234"
+       width="69.989975"
+       height="85.589973"
+       x="57.722702"
+       y="74.218697" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="path2510-2-3"
+       cx="117.58106"
+       cy="145.77702"
+       r="1.75" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="path2510-6"
+       cx="117.57262"
+       cy="83.743607"
+       r="1.75" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2536-6"
+       width="3.5"
+       height="62.167347"
+       x="115.83446"
+       y="83.580811" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="path2510-2"
+       cx="67.52433"
+       cy="145.86507"
+       r="1.75" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="path2510"
+       cx="67.540649"
+       cy="83.882881"
+       r="1.75" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.01;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2536"
+       width="3.5"
+       height="62.167347"
+       x="65.772873"
+       y="83.627594" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.26458333,-0.26458333,0,191.92463,22.75932)"
+       id="text3462"
+       style="font-size:8px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;white-space:pre;shape-inside:url(#rect3464);shape-padding:2;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.793701;stroke-dasharray:none;stroke-opacity:1"><tspan
+         x="280.58402"
+         y="385.337"
+         id="tspan3049"><tspan
+           style="font-size:24px"
+           id="tspan3047">POLYSNAKES</tspan></tspan></text>
+  </g>
+</svg>
