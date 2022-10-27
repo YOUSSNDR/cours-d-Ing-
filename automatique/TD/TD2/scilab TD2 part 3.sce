@@ -28,4 +28,5 @@ plot2d(t,[s2;eps2]',leg="reponse indicielle@erreur");
 //rampe 2
 sr2=csim(t,t,G2);
 epsv2=t-sr2;
+scf(4);
 plot2d(t,[sr2;epsv2]',leg="reponse rampe@erreur");
