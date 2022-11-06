@@ -1,4 +1,4 @@
-#include <string.h>
+#include <cstring>
 
 class LettreMorse {
     public:
@@ -32,3 +32,26 @@ class LettreMorse {
 
 
 };
+
+class Traducteur {
+    public:
+        const char* trad(char lettre){
+            const char* T= LettreMorse::lettre ;//traduction de la lettre en morse
+            int taille=T.size();
+            for(int i=0;i>taille;i++){
+                if (T[i]=='.'){
+                    digitalWrite(LED_BUILTIN,HIGH);
+                    delay(500);
+                    digitalWrite(LED_BUILTIN,LOW);
+                    delay(1000);
+                } else if (T[i]=='-'){
+                    digitalWrite(LED_BUILTIN, HIGH);
+                    delay(1500);
+                    digitalWrite(LED_BUILTIN,LOW);
+                    delay(1000);
+                } else{
+                    break;
+                }
+            }  
+        }
+}
