@@ -3,162 +3,11 @@
 #include <Arduino.h>
 using namespace std;
 
-char l; //pour parcourir les lettres
-const char* tra; //pour les lettres traduites
-int longu;//longuerur des mots
-int ttap= 500; //temps d"un tap court
-int tail;
-String code = "";
+LettreMorse lm;
+int ttap= 250; //temps d"un tap(bip) court
+int code;
 
-class Traducteur {
-    public:
-    void trad(String code){ //fait la traduction
-       longu = code.length();
-      for(int i=0;i<longu;i++){
-        l=code[i];
-        morse(); //change la variable tra
-        trad2(); //agit sur la led
-      }
-    }
 
-    void trad2(){
-          size_t tail = strlen(tra);
-      for (int i=0;i<tail;i++){
-        if (tra[i] == "." ){
-          point();
-        }
-        else if (tra[i] == "-"){
-          tiret();
-        }
-        else {
-          delay(ttap*3);
-        }
-      }
-    }
-
-    void point(){
-      Serial.print(".");
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(ttap);
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(ttap);
-    }
-
-    void tiret(){
-      Serial.print("-");
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(ttap * 3);
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(ttap);
-    }
-
-    void morse(){
-    if (l == "A" || l == "a"){
-      tra= LettreMorse::A;
-      Serial.print(" ");
-    }
-    else if (l == "B" || l == "b"){
-      tra= LettreMorse::B;
-      Serial.print(" ");
-    }
-    else if (l == "C" || l == "c"){
-      tra= LettreMorse::C;
-      Serial.print(" ");
-    }
-    else if (l == "D" || l == "d"){
-      tra= LettreMorse::D;
-      Serial.print(" ");
-    }
-    else if (l == "E" || l == "e"){
-      tra= LettreMorse::E;
-      Serial.print(" ");
-    }
-    else if (l == "F" || l == "f"){
-      tra= LettreMorse::F;
-      Serial.print(" ");
-    }
-    else if (l == "G" || l == "g"){
-      tra= LettreMorse::G;
-      Serial.print(" ");
-    }
-    else if (l == "H" || l == "h"){
-      tra= LettreMorse::H;
-      Serial.print(" ");
-    }
-    else if (l == "I" || l == "i"){
-      tra= LettreMorse::I;
-      Serial.print(" ");
-    }
-    else if (l == "J" || l == "j"){
-      tra= LettreMorse::J;
-      Serial.print(" ");
-    }
-    else if (l == "K" || l == "k"){
-      tra= LettreMorse::K;
-      Serial.print(" ");
-    }
-    else if (l == "L" || l == "l"){
-      tra= LettreMorse::L;
-      Serial.print(" ");
-    }
-    else if (l == "M" || l == "m"){
-      tra= LettreMorse::M;
-      Serial.print(" ");
-    }
-    else if (l == "N" || l == "n"){
-      tra= LettreMorse::N;
-      Serial.print(" ");
-    }
-    else if (l == "O" || l == "o"){
-      tra= LettreMorse::O;
-      Serial.print(" ");
-    }
-    else if (l == "P" || l == "p"){
-      tra= LettreMorse::P;
-      Serial.print(" ");
-    }
-    else if (l == "Q" || l == "q"){
-      tra= LettreMorse::Q;
-      Serial.print(" ");
-    }
-    else if (l == "R" || l == "r"){
-      tra= LettreMorse::R;
-      Serial.print(" ");
-    }
-    else if (l == "S" || l == "s"){
-      tra= LettreMorse::S;
-      Serial.print(" ");
-    }
-    else if (l == "T" || l == "t"){
-      tra= LettreMorse::T;
-      Serial.print(" ");
-    }
-    else if (l == "U" || l == "u"){
-      tra= LettreMorse::U;
-      Serial.print(" "); 
-    }
-    else if (l == "V" || l == "v"){
-      tra= LettreMorse::V;
-      Serial.print(" ");
-    }
-    else if (l == "W" || l == "w"){
-      tra= LettreMorse::W;
-      Serial.print(" ");
-    }
-    else if (l == "X" || l == "x"){
-      tra= LettreMorse::X;
-      Serial.print(" ");
-    }
-    else if (l == "Y" || l == "y"){
-      tra= LettreMorse::Y;
-      Serial.print(" ");
-    }
-    else if (l == "Z" || l == "z"){
-      tra= LettreMorse::Z;
-      Serial.print(" ");
-    }
-  }
-};
 
 void setup() {
 Serial.begin(9600);
@@ -168,13 +17,40 @@ Serial.println("I am ready...");
 }
 
 void loop() {
-  while (Serial.available()){
-    code=Serial.readString();
-    Serial.print(code);
-    Serial.print("=");
-    Traducteur obj;
-    obj.trad(code);
-Serial.println("");
+  if (Serial.available()){
+    code=Serial.read();
+    lm.morsetr(code);
+    Serial.println(lm.morse);
+    trad2();
+    delay(ttap*3);
+  }
 }
-delay(1000);
-}
+
+
+void trad2(){
+  for (int i=0;true;i++){
+    if (lm.morse[i] == '.' ){
+      point();
+    }
+        else if (lm.morse[i] == '-'){
+          tiret();
+        }
+        else {
+         break;
+        }
+      }
+    }
+
+    void point(){
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(ttap);
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(ttap);
+    }
+
+    void tiret(){
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(ttap * 3);
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(ttap);
+    }
