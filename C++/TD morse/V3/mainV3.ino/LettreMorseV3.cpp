@@ -4,7 +4,7 @@ LettreMorse::LettreMorse(){};
 
 
 void LettreMorse::morsetr(int code){
-    switch (code){
+    switch (code){//on test tous les caractère pour voir si il y a correspondance et on prend sa traduction morse
     case 'a':
         morse = ".-";
         break;
